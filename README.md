@@ -93,9 +93,9 @@ vi svija.html
 
 ---
 
-</details><details><summary>4. Commit and Push</summary>
+</details><details><summary>4. Commit and Merge</summary>
 
-#### 4. Commit and Push
+#### 4. Commit and Merge
 
 In Pwika Cloud, check for unsaved changes and commit:
 ```
@@ -112,6 +112,7 @@ Push the new version:
 git push origin stable
 ```
 ---
+
 </details><details><summary>5. Update the Changelog</summary>
 
 #### 5. Update the Changelog
