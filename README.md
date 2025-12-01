@@ -38,7 +38,7 @@ Verify that `.bashrc` has been updated from `/home/site-management/backup.sh` to
 ,rc
 ```
 - type `,bu` to run the backup script  
-  (see [admin](https://github.com/pwikapanel/admin/blob/beta/backup.md) for more information)
+  (see the [admin repo](https://github.com/pwikapanel/admin/blob/beta/backup.md) for more information)
 
 [du]: https://github.com/pwikapanel/admin/blob/beta/delete.md
 
@@ -46,9 +46,9 @@ Make a cloud backup at [Linode/Akamai](https://cloud.linode.com/linodes).
 
 ---
 
-</details><details><summary>2. Pwika Cloud: Check for Migrations, Commit & Merge</summary>
+</details><details><summary>2. Pwika Cloud: Check for Migrations</summary>
 
-#### 2. Pwika Cloud: Check for Migrations, Commit & Merge
+#### 2. Pwika Cloud: Check for Migrations
 
 Back on the **dev server**, do any final migrations:
 ```
@@ -61,6 +61,7 @@ If there are migrations, migrate:
 ./manage.py migrate
 ```
 ---
+
 </details><details><summary>3. Script Minification</summary>
 
 #### 3. Script Minification
@@ -73,7 +74,7 @@ In the `templates` directory:
 cd /opt/cloud/svija/templates/svija
 ls -t */*
 ```
-Minify any files that have been modified since the last release using the following tools:
+Minify any files that have been modified since the [last release](https://github.com/pwikapanel/cloud/releases) using the following tools:
 - [toptal.com/css](https://www.toptal.com/developers/cssminifier)
 - [toptal.com/html](https://www.toptal.com/developers/html-minifier)
 - [toptal.com/javascript](https://www.toptal.com/developers/javascript-minifier)
@@ -91,6 +92,7 @@ vi svija.html
 ```
 
 ---
+
 </details><details><summary>4. Commit and Push</summary>
 
 #### 4. Commit and Push
