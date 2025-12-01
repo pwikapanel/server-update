@@ -3,15 +3,15 @@
 
 *Updated 26 September, 2025*
 
-![Svija: SVG-based websites built in Adobe Illustrator][logo]
+![Pwika: SVG-based websites built in Adobe Illustrator][logo]
 
-[logo]: http://files.svija.love/github/readme-logo.png "Svija: SVG-based websites built in Adobe Illustrator"
+[logo]: http://files.pwika.com/github/readme-logo.png "Pwika: SVG-based websites built in Adobe Illustrator"
 
 *to clean up before making public:*
 - references to google sheets on this page (search for `oogle`)
 
 
-### Releasing a New Version of Svija Cloud
+### Releasing a New Version of Pwika Cloud
 
 Change to [detailed version](detailed-version.md) (potentially out of date). See [issues](../../issues) for tasks specific to the current update.
 
@@ -41,9 +41,9 @@ vi /opt/sitelist.txt
 Make a cloud backup at [Linode/Akamai](https://cloud.linode.com/linodes).
 
 ---
-</details><details><summary>2. Svija Cloud: Check for Migrations, Commit & Merge</summary>
+</details><details><summary>2. Pwika Cloud: Check for Migrations, Commit & Merge</summary>
 
-#### 2. Svija Cloud: Check for Migrations, Commit & Merge
+#### 2. Pwika Cloud: Check for Migrations, Commit & Merge
 
 Back on the **dev server**, do any final migrations:
 ```
@@ -90,7 +90,7 @@ vi svija.html
 
 #### 4. Commit and Push
 
-In Svija Cloud, check for unsaved changes and commit:
+In Pwika Cloud, check for unsaved changes and commit:
 ```
 cd /opt/cloud
 git status
@@ -112,12 +112,12 @@ git push origin master
 Copy info from/to:
 
 - [github.com/svijasvg/cloud/commits/master](https://github.com/svijasvg/cloud/commits/master)    
-- [tech.svija.love/cloud/changelog](https://tech.svija.love/programs/cloud/changelog)   
+- [tech.pwika.com/cloud/changelog](https://tech.pwika.com/programs/cloud/changelog)   
 
 ---
-</details><details><summary>6. Svija Cloud: Create Installable Version</summary>
+</details><details><summary>6. Pwika Cloud: Create Installable Version</summary>
 
-#### 6. Svija Cloud: Create Installable Version
+#### 6. Pwika Cloud: Create Installable Version
 
 Create an **installable version** so that will be available in case of future compatibility problems:
 
@@ -144,9 +144,9 @@ On Github, create a [new release](https://github.com/svijasvg/cloud/releases) fr
 
 ### Updating Servers
 <!----->
-<details><summary>1. Update the Svija Servers</summary>
+<details><summary>1. Update the Pwika Servers</summary>
 
-#### 1. Update the Svija Servers
+#### 1. Update the Pwika Servers
 
 First, update the **server software**
 ```
