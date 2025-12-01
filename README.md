@@ -19,6 +19,7 @@ Change to [detailed version](detailed-version.md) (potentially out of date). See
 
 ### Preparation
 <!----->
+
 <details><summary>1. Database & Server Backups</summary>
 
 #### 1. Database & Server Backups
@@ -32,7 +33,10 @@ ls /home
 ```
 vi /opt/sitelist.txt
 ```
-
+Verify that `.bashrc` has been updated:
+```
+,rc
+```
 - type `,bu` then `enter` to run the backup script  
   (see [site-management](https://github.com/svijasvg/site-mgmt/blob/beta/backup.md) for more information)
 
@@ -41,6 +45,7 @@ vi /opt/sitelist.txt
 Make a cloud backup at [Linode/Akamai](https://cloud.linode.com/linodes).
 
 ---
+
 </details><details><summary>2. Pwika Cloud: Check for Migrations, Commit & Merge</summary>
 
 #### 2. Pwika Cloud: Check for Migrations, Commit & Merge
