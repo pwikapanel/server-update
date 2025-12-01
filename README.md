@@ -37,10 +37,10 @@ Verify that `.bashrc` has been updated from `/home/site-management/backup.sh` to
 ```
 ,rc
 ```
-- type `,bu` then `enter` to run the backup script  
-  (see [site-management](https://github.com/svijasvg/site-mgmt/blob/beta/backup.md) for more information)
+- type `,bu` to run the backup script  
+  (see [admin](https://github.com/pwikapanel/admin/blob/beta/backup.md) for more information)
 
-[du]: https://github.com/svijasvg/site-mgmt/blob/beta/delete.md
+[du]: https://github.com/pwikapanel/admin/blob/beta/delete.md
 
 Make a cloud backup at [Linode/Akamai](https://cloud.linode.com/linodes).
 
@@ -100,7 +100,7 @@ In Pwika Cloud, check for unsaved changes and commit:
 cd /opt/cloud
 git status
 ```
-Check out the **destination branch** and merge ([list of commits](https://github.com/svijasvg/cloud/commits/beta)):
+Check out the **destination branch** and merge ([list of commits](https://github.com/pwikapanel/cloud/commits/beta)):
 ```
 git checkout master
 git merge beta --no-ff
@@ -116,7 +116,7 @@ git push origin master
 
 Copy info from/to:
 
-- [github.com/svijasvg/cloud/commits/master](https://github.com/svijasvg/cloud/commits/master)    
+- [github.com/pwikapanel/cloud/commits/master](https://github.com/pwikapanel/cloud/commits/master)    
 - [tech.pwika.com/cloud/changelog](https://tech.pwika.com/programs/cloud/changelog)   
 
 ---
@@ -136,13 +136,13 @@ cd /opt/cloud
 
 #### 7. A New Github Release
 
-On Github, create a [new release](https://github.com/svijasvg/cloud/releases) from the **master branch**.
+On Github, create a [new release](https://github.com/pwikapanel/cloud/releases) from the **master branch**.
 
 - use the current version number for the tag (2.2.7)
 - choose target **Master**
 - use the month & year for the title (October 2021)
 - if there is more than one release in a month, append -1, -2 etc. to all releases for the month
-- use the [commit list](https://github.com/svijasvg/cloud/commits/master) for the description
+- use the [commit list](https://github.com/pwikapanel/cloud/commits/master) for the description
 
 ---
 </details>
@@ -172,7 +172,7 @@ Clone the **git repository**:
 ```
 cd /opt
 rm -rf cloud-update
-git clone ssh://git@github.com/svijasvg/cloud-update.git
+git clone ssh://git@github.com/pwikapanel/cloud-update.git
 chmod 777 cloud-update/*.sh
 ```
 To install a beta release:
@@ -199,7 +199,7 @@ Look at the [issues][li] for **⚠️ updates for version 2.3.5** (for example)
 
 Update websites accordingly.
 
-[li]: https://github.com/svijasvg/cloud-update/issues
+[li]: https://github.com/pwikapanel/cloud-update/issues
 
 ---
 
