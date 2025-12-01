@@ -33,7 +33,7 @@ ls /home
 ```
 vi /opt/sitelist.txt
 ```
-Verify that `.bashrc` has been updated:
+Verify that `.bashrc` has been updated from `/home/site-management/backup.sh` to `/opt/admin/backup.sh`:
 ```
 ,rc
 ```
