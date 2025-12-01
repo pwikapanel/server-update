@@ -104,12 +104,12 @@ git status
 ```
 Check out the **destination branch** and merge ([list of commits](https://github.com/pwikapanel/cloud/commits/beta)):
 ```
-git checkout master
+git checkout stable
 git merge beta --no-ff
 ```
 Push the new version:
 ```
-git push origin master
+git push origin stable
 ```
 ---
 </details><details><summary>5. Update the Changelog</summary>
@@ -118,7 +118,7 @@ git push origin master
 
 Copy info from/to:
 
-- [github.com/pwikapanel/cloud/commits/master](https://github.com/pwikapanel/cloud/commits/master)    
+- [github.com/pwikapanel/cloud/commits/stable](https://github.com/pwikapanel/cloud/commits/stable)    
 - [tech.pwika.com/cloud/changelog](https://tech.pwika.com/programs/cloud/changelog)   
 
 ---
@@ -138,13 +138,13 @@ cd /opt/cloud
 
 #### 7. A New Github Release
 
-On Github, create a [new release](https://github.com/pwikapanel/cloud/releases) from the **master branch**.
+On Github, create a [new release](https://github.com/pwikapanel/cloud/releases) from the **stable branch**.
 
 - use the current version number for the tag (2.2.7)
 - choose target **Master**
 - use the month & year for the title (October 2021)
 - if there is more than one release in a month, append -1, -2 etc. to all releases for the month
-- use the [commit list](https://github.com/pwikapanel/cloud/commits/master) for the description
+- use the [commit list](https://github.com/pwikapanel/cloud/commits/stable) for the description
 
 ---
 </details>
@@ -179,7 +179,7 @@ chmod 777 cloud-update/*.sh
 ```
 To install a beta release:
 ```
-# replace master with beta in line 9
+# replace stable with beta in line 9
 vi cloud-update/update.sh
 ```
 Run the update script:
@@ -216,7 +216,7 @@ Update websites accordingly.
 Check out the beta branch:
 ```
 git checkout beta 
-git merge master --no-ff -m "new version"
+git merge stable --no-ff -m "new version"
 git push -u
 ```
 Increment the version number:
