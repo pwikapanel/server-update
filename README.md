@@ -5,7 +5,7 @@
 
 ![Pwika: SVG-based websites built in Adobe Illustrator][logo]
 
-[logo]: http://files.pwika.com/github/readme-logo.png "Pwika: SVG-based websites built in Adobe Illustrator"
+[logo]: http://files.pwika.com/github/readme-logo.jpg "Pwika: SVG-based websites built in Adobe Illustrator"
 
 *to clean up before making public:*
 - references to google sheets on this page (search for `oogle`)
