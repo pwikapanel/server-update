@@ -1,17 +1,17 @@
 
 <!-- vim: set foldmethod=marker fmr=###,--- :-->
 
-*Updated 25 September, 2025*
+*Updated 18 December, 2025*
 
-![Svija: SVG-based websites built in Adobe Illustrator][logo]
+![Pwika: SVG-based websites built in Adobe Illustrator][logo]
 
-[logo]: http://files.svija.love/github/readme-logo.png "Svija: SVG-based websites built in Adobe Illustrator"
+[logo]: http://files.pwika.com/github/github_banner.png "Pwika: SVG-based websites built in Adobe Illustrator"
 
 *to clean up before making public:*
 - references to google sheets on this page (search for `oogle`)
 
 
-### Releasing a New Version of Svija Cloud
+### Releasing a New Version of Pwika Cloud
 
 Change to [detailed version](detailed-version.md) (potentially out of date). See [issues](../../issues) for tasks specific to the current update.
 
@@ -19,6 +19,7 @@ Change to [detailed version](detailed-version.md) (potentially out of date). See
 
 ### Preparation
 <!----->
+
 <details><summary>1. Database & Server Backups</summary>
 
 #### 1. Database & Server Backups
@@ -32,18 +33,22 @@ ls /home
 ```
 vi /opt/sitelist.txt
 ```
+Verify that `.bashrc` has been updated from `/home/site-management/backup.sh` to `/opt/admin/backup.sh`:
+```
+,rc
+```
+- type `,bu` to run the backup script  
+  (see the [admin repo](https://github.com/pwikapanel/admin/blob/beta/backup.md) for more information)
 
-- type `,bu` then `enter` to run the backup script  
-  (see [site-management](https://github.com/svijasvg/site-mgmt/blob/beta/backup.md) for more information)
-
-[du]: https://github.com/svijasvg/site-mgmt/blob/beta/delete.md
+[du]: https://github.com/pwikapanel/admin/blob/beta/delete.md
 
 Make a cloud backup at [Linode/Akamai](https://cloud.linode.com/linodes).
 
 ---
-</details><details><summary>2. Svija Cloud: Check for Migrations, Commit & Merge</summary>
 
-#### 2. Svija Cloud: Check for Migrations, Commit & Merge
+</details><details><summary>2. Pwika Cloud: Check for Migrations</summary>
+
+#### 2. Pwika Cloud: Check for Migrations
 
 Back on the **dev server**, do any final migrations:
 ```
@@ -56,6 +61,7 @@ If there are migrations, migrate:
 ./manage.py migrate
 ```
 ---
+
 </details><details><summary>3. Script Minification</summary>
 
 #### 3. Script Minification
@@ -68,7 +74,7 @@ In the `templates` directory:
 cd /opt/cloud/svija/templates/svija
 ls -t */*
 ```
-Minify any files that have been modified since the last release using the following tools:
+Minify any files that have been modified since the [last release](https://github.com/pwikapanel/cloud/releases) using the following tools:
 - [toptal.com/css](https://www.toptal.com/developers/cssminifier)
 - [toptal.com/html](https://www.toptal.com/developers/html-minifier)
 - [toptal.com/javascript](https://www.toptal.com/developers/javascript-minifier)
@@ -86,38 +92,40 @@ vi svija.html
 ```
 
 ---
-</details><details><summary>4. Commit and Push</summary>
 
-#### 4. Commit and Push
+</details><details><summary>4. Commit and Merge</summary>
 
-In Svija Cloud, check for unsaved changes and commit:
+#### 4. Commit and Merge
+
+In Pwika Cloud, check for unsaved changes and commit:
 ```
 cd /opt/cloud
 git status
 ```
-Check out the **destination branch** and merge ([list of commits](https://github.com/svijasvg/cloud/commits/beta)):
+Check out the **destination branch** and merge ([list of commits](https://github.com/pwikapanel/cloud/commits/beta)):
 ```
-git checkout master
+git checkout stable
 git merge beta --no-ff
 ```
 Push the new version:
 ```
-git push origin master
+git push origin stable
 ```
 ---
+
 </details><details><summary>5. Update the Changelog</summary>
 
 #### 5. Update the Changelog
 
 Copy info from/to:
 
-- [github.com/svijasvg/cloud/commits/master](https://github.com/svijasvg/cloud/commits/master)    
-- [tech.svija.love/cloud/changelog](https://tech.svija.love/programs/cloud/changelog)   
+- [github.com/pwikapanel/cloud/commits/stable](https://github.com/pwikapanel/cloud/commits/stable)    
+- [tech.pwika.com/cloud/changelog](https://tech.pwika.com/programs/cloud/changelog)   
 
 ---
-</details><details><summary>6. Svija Cloud: Create Installable Version</summary>
+</details><details><summary>6. Pwika Cloud: Create Installable Version</summary>
 
-#### 6. Svija Cloud: Create Installable Version
+#### 6. Pwika Cloud: Create Installable Version
 
 Create an **installable version** so that will be available in case of future compatibility problems:
 
@@ -131,22 +139,22 @@ cd /opt/cloud
 
 #### 7. A New Github Release
 
-On Github, create a [new release](https://github.com/svijasvg/cloud/releases) from the **master branch**.
+On Github, create a [new release](https://github.com/pwikapanel/cloud/releases) from the **stable branch**.
 
 - use the current version number for the tag (2.2.7)
 - choose target **Master**
 - use the month & year for the title (October 2021)
 - if there is more than one release in a month, append -1, -2 etc. to all releases for the month
-- use the [commit list](https://github.com/svijasvg/cloud/commits/master) for the description
+- use the [commit list](https://github.com/pwikapanel/cloud/commits/stable) for the description
 
 ---
 </details>
 
 ### Updating Servers
 <!----->
-<details><summary>1. Update the Svija Servers</summary>
+<details><summary>1. Update the Pwika Servers</summary>
 
-#### 1. Update the Svija Servers
+#### 1. Update the Pwika Servers
 
 First, update the **server software**
 ```
@@ -167,12 +175,12 @@ Clone the **git repository**:
 ```
 cd /opt
 rm -rf cloud-update
-git clone ssh://git@github.com/svijasvg/cloud-update.git
+git clone ssh://git@github.com/pwikapanel/cloud-update.git
 chmod 777 cloud-update/*.sh
 ```
 To install a beta release:
 ```
-# replace master with beta in line 9
+# replace stable with beta in line 9
 vi cloud-update/update.sh
 ```
 Run the update script:
@@ -194,7 +202,7 @@ Look at the [issues][li] for **⚠️ updates for version 2.3.5** (for example)
 
 Update websites accordingly.
 
-[li]: https://github.com/svijasvg/cloud-update/issues
+[li]: https://github.com/pwikapanel/cloud-update/issues
 
 ---
 
@@ -209,7 +217,7 @@ Update websites accordingly.
 Check out the beta branch:
 ```
 git checkout beta 
-git merge master --no-ff -m "new version"
+git merge stable --no-ff -m "new version"
 git push -u
 ```
 Increment the version number:

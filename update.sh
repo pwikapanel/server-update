@@ -6,7 +6,7 @@ source /opt/venv/djangoEnv/bin/activate
 
 clear
 printf "\nUpdating Svija Cloud\n\n"
-pip install git+ssh://git@github.com/svijalove/cloud.git@master#egg=django-svija --upgrade
+pip install git+ssh://git@github.com/svijalove/cloud.git@stable#egg=django-svija --upgrade
 printf "\n————— Svija updated"
 printf "\n————————————————————————————————————————————————————————————————————————————————\n"
 
