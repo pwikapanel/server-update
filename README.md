@@ -85,9 +85,7 @@ Update websites accordingly.
 
 ---
 
-</details>
-
-<details><summary>Verifying Pwika Cloud prior to installation</summary><br>
+</details><hr><details><summary>Verifying Pwika Cloud prior to installation</summary><br>
 
 On the **Pwika Cloud development server**:
 
