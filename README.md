@@ -22,9 +22,9 @@ See [issues](../../issues) for tasks specific to the current update.
 ```
 ls /home
 ```
-- [delete][https://github.com/pwikapanel/site-admin] any unused websites
+- [delete](https://github.com/pwikapanel/site-admin) any unused websites
 - update `/opt/sitelist.txt` with **project folders** (not URL's):
-- [back up][https://github.com/pwikapanel/site-admin] remaining websites
+- [back up](https://github.com/pwikapanel/site-admin) remaining websites
 - make a cloud backup at [Linode/Akamai](https://cloud.linode.com/linodes).
 
 ---
