@@ -24,10 +24,13 @@ cd /opt
 ls /home
 ```
 - [delete](https://github.com/pwikapanel/site-admin) any unused websites
-- update `/opt/sitelist.txt` with **project folders** (not URL's):
+- update `/opt/sitelist.txt` with **project folders from home directory** (not URL's):
 - [back up](https://github.com/pwikapanel/site-admin) remaining websites
 - make a cloud backup at [Linode/Akamai](https://cloud.linode.com/linodes).
-
+```
+cat version.txt
+vi sitelist.txt
+```
 ---
 
 </details><details><summary>2. Update the Pwika Servers</summary>
@@ -85,7 +88,7 @@ Update websites accordingly.
 
 ---
 
-</details><hr><details><summary>pre-installation: verifying Pwika Cloud</summary><br>
+</details><hr><details name="only"><summary>pre-installation: verifying Pwika Cloud</summary><br>
 
 On the **Pwika Cloud development server**:
 
@@ -177,7 +180,7 @@ On Github, create a [new release](https://github.com/pwikapanel/cloud/releases) 
 
 ---
 
-</details><details><summary>post-installation: creating a new Beta version</summary><br>
+</details><details name="only"><summary>post-installation: creating a new Beta version</summary><br>
 
 On the **Pwika Cloud development server**:
 
