@@ -47,10 +47,9 @@ apt dist-upgrade -y
 
 Check the `/opt/sitelist.txt` (it should be correct after backups):
 ```
-ls /home && cd /opt
-```
-```
-vi sitelist.txt
+ls /home
+cd /opt
+cat sitelist.txt
 ```
 Clone the **git repository**:
 ```
@@ -225,7 +224,7 @@ cd /opt/cloud
 vi svija/templates/svija/svija.html # replace _min with _max
 ```
 ```
-git commit -m "Beta ready for development" -a && git push -u  
+git commit -m "new beta version, ready for development" -a && git push -u  
 ```
 ---
 
