@@ -55,13 +55,8 @@ Clone the **git repository**:
 ```
 cd /opt
 rm -rf cloud-update
-git clone ssh://git@github.com/pwikapanel/cloud-update.git
+git clone git@github.com:pwikapanel/cloud-update.git
 chmod 777 cloud-update/*.sh
-```
-To install a beta release:
-```
-# replace stable with beta in line 9
-vi cloud-update/update.sh
 ```
 Run the update script:
 ```
@@ -70,6 +65,13 @@ source cloud-update/update.sh
 ```
 # update to new version
 vi version.txt
+```
+***
+
+To install a beta release:
+```
+# replace stable with beta in line 9
+vi cloud-update/update.sh
 ```
 ---
 
