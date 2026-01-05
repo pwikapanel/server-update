@@ -14,7 +14,7 @@ See [issues](../../issues) for tasks specific to the current update.
 ### Updating Servers
 <!----->
 
-</details><hr><details><summary>1. Database & Server Backups</summary>
+</details><hr><details name="only"><summary>1. Database & Server Backups</summary>
 
 ### 1. Database & Server Backups
 
@@ -33,7 +33,7 @@ vi sitelist.txt
 ```
 ---
 
-</details><details><summary>2. Update the Pwika Servers</summary>
+</details><details name="only"><summary>2. Update the Pwika Servers</summary>
 
 ### 2. Update the Pwika Servers
 
@@ -74,7 +74,7 @@ vi version.txt
 ```
 ---
 
-</details><details><summary>3. Individual Website Updates</summary>
+</details><details name="only"><summary>3. Individual Website Updates</summary>
 
 ### 3. Individual Website Updates
 
