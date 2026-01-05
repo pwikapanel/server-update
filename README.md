@@ -7,11 +7,9 @@
 
 [logo]: http://files.pwika.com/github/github_banner.png "Pwika: SVG-based websites built in Adobe Illustrator"
 
-### Releasing a New Version of Pwika Cloud
+<h3>Releasing a New Version of Pwika Cloud</h3>
 
 See [issues](../../issues) for tasks specific to the current update.
-
----
 
 <details><summary>Verifying Pwika Cloud prior to installation</summary><br>
 
