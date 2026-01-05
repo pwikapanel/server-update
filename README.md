@@ -11,51 +11,8 @@
 
 See [issues](../../issues) for tasks specific to the current update.
 
-<details><summary>Verifying Pwika Cloud prior to installation</summary><br>
-
-On the **Pwika Cloud development server**:
-
-#### Check for Migrations
-
-```
-cd /home/ # any site
-workon djangoEnv
-./manage.py makemigrations
-```
-If there are migrations, migrate:
-```
-./manage.py migrate
-```
-If there were migrations, add to git and commit.
-
-----
-#### Script Minification
-
-In the `templates` directory:
-- full scripts with commentes take the form `filename_max.ext`
-- minified versions take the form `filename_min.ext`
-
-```
-cd /opt/cloud/svija/templates/svija
-ls -t */*
-```
-Minify any files that have been modified since the [last release](https://github.com/pwikapanel/cloud/releases) using the following tools:
-- [toptal.com/css](https://www.toptal.com/developers/cssminifier)
-- [toptal.com/html](https://www.toptal.com/developers/html-minifier)
-- [toptal.com/javascript](https://www.toptal.com/developers/javascript-minifier)
-
-Follow these steps:
-1. commit any changes
-2. copy the pages from the repository using Github's copy icon
-3. paste into the minifier & minify
-4. paste into the new version in Terminal
-
-Update the main template:
-```
-vi svija.html
-# :%s/_max/_min/g
-```
----
+### Updating Servers
+<!----->
 
 </details><hr><details><summary>1. Database & Server Backups</summary>
 
@@ -83,68 +40,7 @@ Make a cloud backup at [Linode/Akamai](https://cloud.linode.com/linodes).
 
 ---
 
-</details><details><summary>4. Commit and Merge</summary>
-
-#### 4. Commit and Merge
-
-In Pwika Cloud, check for unsaved changes and commit:
-```
-cd /opt/cloud
-git status
-```
-Check out the **destination branch** and merge ([list of commits](https://github.com/pwikapanel/cloud/commits/beta)):
-```
-git checkout stable
-git merge beta --no-ff
-```
-Push the new version:
-```
-git push origin stable
-```
----
-
-</details><details><summary>5. Update the Changelog</summary>
-
-#### 5. Update the Changelog
-
-Copy info from/to:
-
-- [github.com/pwikapanel/cloud/commits/stable](https://github.com/pwikapanel/cloud/commits/stable)    
-- [tech.pwika.com/cloud/changelog](https://tech.pwika.com/programs/cloud/changelog)   
-
----
-
-</details><details><summary>6. Pwika Cloud: Create Installable Version</summary>
-
-#### 6. Pwika Cloud: Create Installable Version
-
-Create an **installable version** so that will be available in case of future compatibility problems:
-
-Run the tarball creation script (automatically commits itself to Github):
-```
-cd /opt/cloud
-./save_tar.sh
-```
----
-
-</details><details><summary>7. A New Github Release</summary>
-
-#### 7. A New Github Release
-
-On Github, create a [new release](https://github.com/pwikapanel/cloud/releases) from the **stable branch**.
-
-- use the current version number for the tag (2.2.7)
-- choose target **Master**
-- use the month & year for the title (October 2021)
-- if there is more than one release in a month, append -1, -2 etc. to all releases for the month
-- use the [commit list](https://github.com/pwikapanel/cloud/commits/stable) for the description
-
----
 </details>
-
-### Updating Servers
-<!----->
-
 <details><summary>1. Update the Pwika Servers</summary>
 
 #### 1. Update the Pwika Servers
@@ -202,10 +98,101 @@ Update websites accordingly.
 
 </details>
 
-### A New Beta Version
-<!----->
+<details><summary>Verifying Pwika Cloud prior to installation</summary><br>
 
-<details><summary>1. Check Out Beta Branch & Increment Version</summary>
+On the **Pwika Cloud development server**:
+
+#### Check for Migrations
+
+```
+cd /home/ # any site
+workon djangoEnv
+./manage.py makemigrations
+```
+If there are migrations, migrate:
+```
+./manage.py migrate
+```
+If there were migrations, add to git and commit.
+
+----
+#### Script Minification
+
+In the `templates` directory:
+- full scripts with commentes take the form `filename_max.ext`
+- minified versions take the form `filename_min.ext`
+
+```
+cd /opt/cloud/svija/templates/svija
+ls -t */*
+```
+Minify any files that have been modified since the [last release](https://github.com/pwikapanel/cloud/releases) using the following tools:
+- [toptal.com/css](https://www.toptal.com/developers/cssminifier)
+- [toptal.com/html](https://www.toptal.com/developers/html-minifier)
+- [toptal.com/javascript](https://www.toptal.com/developers/javascript-minifier)
+
+Follow these steps:
+1. commit any changes
+2. copy the pages from the repository using Github's copy icon
+3. paste into the minifier & minify
+4. paste into the new version in Terminal
+
+Update the main template:
+```
+vi svija.html
+# :%s/_max/_min/g
+```
+---
+#### Commit and Merge
+
+In Pwika Cloud, check for unsaved changes and commit:
+```
+cd /opt/cloud
+git status
+```
+Check out the **destination branch** and merge ([list of commits](https://github.com/pwikapanel/cloud/commits/beta)):
+```
+git checkout stable
+git merge beta --no-ff
+```
+Push the new version:
+```
+git push origin stable
+```
+---
+#### Update the Changelog
+
+Copy info from/to:
+
+- [github.com/pwikapanel/cloud/commits/stable](https://github.com/pwikapanel/cloud/commits/stable)    
+- [tech.pwika.com/cloud/changelog](https://tech.pwika.com/programs/cloud/changelog)   
+
+---
+#### Create Installable Version
+
+Create an **installable version** so that will be available in case of future compatibility problems:
+
+Run the tarball creation script (automatically commits itself to Github):
+```
+cd /opt/cloud
+./save_tar.sh
+```
+---
+#### A New Github Release
+
+On Github, create a [new release](https://github.com/pwikapanel/cloud/releases) from the **stable branch**.
+
+- use the current version number for the tag (2.2.7)
+- choose target **Master**
+- use the month & year for the title (October 2021)
+- if there is more than one release in a month, append -1, -2 etc. to all releases for the month
+- use the [commit list](https://github.com/pwikapanel/cloud/commits/stable) for the description
+
+---
+
+</details><details><summary>Creating a new Beta after installation</summary><br>
+
+On the **Pwika Cloud development server**:
 
 #### 1. Check Out Beta Branch & Increment Version
 
@@ -231,9 +218,6 @@ svija/templates/admin/base_site.html \
 svija/static/admin/js/fetch-remote.js
 ```
 ---
-
-</details><details><summary>2. update GSAP</summary>
-
 #### 2. update GSAP
 
 Go to [GSAP's installation page](https://gsap.com/docs/v3/Installation/)
@@ -244,9 +228,6 @@ cd /opt/cloud
 vi svija/static/svija/js/gsap.min.js
 ```
 ---
-
-</details><details><summary>3. Un-minify Scripts & Commit</summary>
-
 #### 3. Un-minify Scripts & Commit
 
 ```
