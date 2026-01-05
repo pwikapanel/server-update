@@ -57,7 +57,7 @@ vi svija.html
 ```
 ---
 
-</details><details><summary>1. Database & Server Backups</summary>
+</details><hr><details><summary>1. Database & Server Backups</summary>
 
 #### 1. Database & Server Backups
 
