@@ -84,7 +84,7 @@ Update websites accordingly.
 
 ---
 
-</details><hr><details><summary>Verifying Pwika Cloud prior to installation</summary><br>
+</details><hr><details><summary>pre-installation: verifying Pwika Cloud</summary><br>
 
 On the **Pwika Cloud development server**:
 
@@ -176,7 +176,7 @@ On Github, create a [new release](https://github.com/pwikapanel/cloud/releases) 
 
 ---
 
-</details><details><summary>Creating a new Beta after installation</summary><br>
+</details><details><summary>post-installation: creating a new Beta version</summary><br>
 
 On the **Pwika Cloud development server**:
 
