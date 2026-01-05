@@ -18,8 +18,9 @@ See [issues](../../issues) for tasks specific to the current update.
 
 #### 1. Database & Server Backups
 
-- SSH to the server
+SSH to the server, then:
 ```
+cd /opt
 ls /home
 ```
 - [delete](https://github.com/pwikapanel/site-admin) any unused websites
