@@ -184,7 +184,7 @@ On Github, create a [new release](https://github.com/pwikapanel/cloud/releases) 
 
 On the **Pwika Cloud development server**:
 
-#### 1. Check Out Beta Branch & Increment Version
+#### 1. check out beta branch & increment version
 
 Check out the beta branch:
 ```
@@ -210,15 +210,15 @@ svija/static/admin/js/fetch-remote.js
 ---
 #### 2. update GSAP
 
-Go to [GSAP's installation page](https://gsap.com/docs/v3/Installation/)
+Go to the [GSAP installation page](https://gsap.com/docs/v3/Installation/)
 - click on **Grab the files** then **Get GSAP**
-- copy the contents of `minified/gsap.min.js` and paste into the following file
+- copy the contents of `minified/gsap.min.js` and paste into the following file:
 ```
 cd /opt/cloud
 vi svija/static/svija/js/gsap.min.js
 ```
 ---
-#### 3. Un-minify Scripts & Commit
+#### 3. un-minify scripts & commit
 
 ```
 cd /opt/cloud
