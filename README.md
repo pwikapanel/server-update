@@ -46,9 +46,9 @@ Make a cloud backup at [Linode/Akamai](https://cloud.linode.com/linodes).
 
 #### 2. Pwika Cloud: Check for Migrations
 
-Back on the **dev server**, do any final migrations:
+Back on the **Pwika Cloud development server**, do any final migrations:
 ```
-cd /home/svija210901
+cd /home/ # any site
 workon djangoEnv
 ./manage.py makemigrations
 ```
