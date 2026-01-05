@@ -16,7 +16,7 @@ See [issues](../../issues) for tasks specific to the current update.
 
 </details><hr><details><summary>1. Database & Server Backups</summary>
 
-#### 1. Database & Server Backups
+### 1. Database & Server Backups
 
 SSH to the server, then:
 ```
@@ -32,7 +32,7 @@ ls /home
 
 </details><details><summary>2. Update the Pwika Servers</summary>
 
-#### 2. Update the Pwika Servers
+### 2. Update the Pwika Servers
 
 First, update the **server software**
 ```
@@ -73,7 +73,7 @@ vi version.txt
 
 </details><details><summary>3. Individual Website Updates</summary>
 
-#### 3. Individual Website Updates
+### 3. Individual Website Updates
 
 Some updates require manual intervention for each site.
 
