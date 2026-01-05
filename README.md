@@ -13,8 +13,51 @@ See [issues](../../issues) for tasks specific to the current update.
 
 ---
 
-### Preparation
-<!----->
+<details><summary>Verifying Pwika Cloud prior to installation</summary><br>
+
+On the **Pwika Cloud development server**:
+
+#### Check for Migrations
+
+```
+cd /home/ # any site
+workon djangoEnv
+./manage.py makemigrations
+```
+If there are migrations, migrate:
+```
+./manage.py migrate
+```
+If there were migrations, add to git and commit.
+
+----
+#### Script Minification
+
+In the `templates` directory:
+- full scripts with commentes take the form `filename_max.ext`
+- minified versions take the form `filename_min.ext`
+
+```
+cd /opt/cloud/svija/templates/svija
+ls -t */*
+```
+Minify any files that have been modified since the [last release](https://github.com/pwikapanel/cloud/releases) using the following tools:
+- [toptal.com/css](https://www.toptal.com/developers/cssminifier)
+- [toptal.com/html](https://www.toptal.com/developers/html-minifier)
+- [toptal.com/javascript](https://www.toptal.com/developers/javascript-minifier)
+
+Follow these steps:
+1. commit any changes
+2. copy the pages from the repository using Github's copy icon
+3. paste into the minifier & minify
+4. paste into the new version in Terminal
+
+Update the main template:
+```
+vi svija.html
+# :%s/_max/_min/g
+```
+---
 
 <details><summary>1. Database & Server Backups</summary>
 
@@ -39,45 +82,6 @@ Verify that `.bashrc` has been updated from `/home/site-management/backup.sh` to
 [du]: https://github.com/pwikapanel/admin/blob/beta/delete.md
 
 Make a cloud backup at [Linode/Akamai](https://cloud.linode.com/linodes).
-
----
-
-</details><details><summary>2. Pwika Cloud: Check for Migrations</summary>
-
-#### 2. Pwika Cloud: Check for Migrations
-
-Back on the **Pwika Cloud development server**, make sure there are no un-implemented migrations.
-
----
-
-</details><details><summary>3. Script Minification</summary>
-
-#### 3. Script Minification
-
-In the `templates` directory:
-- commented scripts take the form `filename_max.ext`
-- minified versions take the form `filename_min.ext`
-
-```
-cd /opt/cloud/svija/templates/svija
-ls -t */*
-```
-Minify any files that have been modified since the [last release](https://github.com/pwikapanel/cloud/releases) using the following tools:
-- [toptal.com/css](https://www.toptal.com/developers/cssminifier)
-- [toptal.com/html](https://www.toptal.com/developers/html-minifier)
-- [toptal.com/javascript](https://www.toptal.com/developers/javascript-minifier)
-
-Follow these steps:
-1. commit any changes
-2. copy the pages from the repository using Github's copy icon
-3. paste into the minifier & minify
-4. paste into the new version in Terminal
-
-Update the main template:
-```
-vi svija.html
-# :%s/_max/_min/g
-```
 
 ---
 
