@@ -1,19 +1,15 @@
 
 <!-- vim: set foldmethod=marker fmr=###,--- :-->
 
-*Updated 18 December, 2025*
+*Updated 5 January, 2026*
 
 ![Pwika: SVG-based websites built in Adobe Illustrator][logo]
 
 [logo]: http://files.pwika.com/github/github_banner.png "Pwika: SVG-based websites built in Adobe Illustrator"
 
-*to clean up before making public:*
-- references to google sheets on this page (search for `oogle`)
-
-
 ### Releasing a New Version of Pwika Cloud
 
-Change to [detailed version](detailed-version.md) (potentially out of date). See [issues](../../issues) for tasks specific to the current update.
+See [issues](../../issues) for tasks specific to the current update.
 
 ---
 
@@ -123,6 +119,7 @@ Copy info from/to:
 - [tech.pwika.com/cloud/changelog](https://tech.pwika.com/programs/cloud/changelog)   
 
 ---
+
 </details><details><summary>6. Pwika Cloud: Create Installable Version</summary>
 
 #### 6. Pwika Cloud: Create Installable Version
@@ -135,6 +132,7 @@ cd /opt/cloud
 ./save_tar.sh
 ```
 ---
+
 </details><details><summary>7. A New Github Release</summary>
 
 #### 7. A New Github Release
@@ -152,6 +150,7 @@ On Github, create a [new release](https://github.com/pwikapanel/cloud/releases) 
 
 ### Updating Servers
 <!----->
+
 <details><summary>1. Update the Pwika Servers</summary>
 
 #### 1. Update the Pwika Servers
@@ -192,6 +191,7 @@ source cloud-update/update.sh
 vi version.txt
 ```
 ---
+
 </details><details><summary>2. Individual Website Updates</summary>
 
 #### 2. Individual Website Updates
@@ -210,6 +210,7 @@ Update websites accordingly.
 
 ### A New Beta Version
 <!----->
+
 <details><summary>1. Check Out Beta Branch & Increment Version</summary>
 
 #### 1. Check Out Beta Branch & Increment Version
@@ -236,6 +237,7 @@ svija/templates/admin/base_site.html \
 svija/static/admin/js/fetch-remote.js
 ```
 ---
+
 </details><details><summary>2. update GSAP</summary>
 
 #### 2. update GSAP
@@ -248,6 +250,7 @@ cd /opt/cloud
 vi svija/static/svija/js/gsap.min.js
 ```
 ---
+
 </details><details><summary>3. Un-minify Scripts & Commit</summary>
 
 #### 3. Un-minify Scripts & Commit
@@ -260,5 +263,6 @@ vi svija/templates/svija/svija.html # replace _min with _max
 git commit -m "Beta ready for development" -a && git push -u  
 ```
 ---
+
 </details>
 
