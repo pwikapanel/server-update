@@ -22,21 +22,10 @@ See [issues](../../issues) for tasks specific to the current update.
 ```
 ls /home
 ```
-- [delete][du] any unused websites
+- [delete][https://github.com/pwikapanel/site-admin] any unused websites
 - update `/opt/sitelist.txt` with **project folders** (not URL's):
-```
-vi /opt/sitelist.txt
-```
-Verify that `.bashrc` has been updated from `/home/site-management/backup.sh` to `/opt/admin/backup.sh`:
-```
-,rc
-```
-- type `,bu` to run the backup script  
-  (see the [admin repo](https://github.com/pwikapanel/admin/blob/beta/backup.md) for more information)
-
-[du]: https://github.com/pwikapanel/admin/blob/beta/delete.md
-
-Make a cloud backup at [Linode/Akamai](https://cloud.linode.com/linodes).
+- [back up][https://github.com/pwikapanel/site-admin] remaining websites
+- make a cloud backup at [Linode/Akamai](https://cloud.linode.com/linodes).
 
 ---
 
