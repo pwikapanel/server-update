@@ -45,7 +45,7 @@ apt dist-upgrade -y
 
 **Check issues for other updates**
 
-Check the `/opt/sitelist.txt` (it should be correct after backups):
+Check `/opt/sitelist.txt` (it should be correct after backups):
 ```
 ls /home
 cd /opt
