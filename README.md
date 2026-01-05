@@ -29,10 +29,9 @@ ls /home
 
 ---
 
-</details>
-<details><summary>1. Update the Pwika Servers</summary>
+</details><details><summary>2. Update the Pwika Servers</summary>
 
-#### 1. Update the Pwika Servers
+#### 2. Update the Pwika Servers
 
 First, update the **server software**
 ```
@@ -71,9 +70,9 @@ vi version.txt
 ```
 ---
 
-</details><details><summary>2. Individual Website Updates</summary>
+</details><details><summary>3. Individual Website Updates</summary>
 
-#### 2. Individual Website Updates
+#### 3. Individual Website Updates
 
 Some updates require manual intervention for each site.
 
